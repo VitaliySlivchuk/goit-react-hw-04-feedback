@@ -5,8 +5,8 @@ import css from './FeedbackOptions.module.css';
 export const FeedbackOptions = ({ options, onIncrementFeedback }) => {
   return (
     <ul className={css.feedback}>
-      {options.map(el => (
-        <li key={el}>
+      {options.map((el, index) => (
+        <li key={index}>
           <button className={css.item} onClick={onIncrementFeedback}>
             {el[0].toUpperCase() + el.slice(1)}
           </button>
